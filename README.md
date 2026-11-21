@@ -136,12 +136,3 @@ Possible extensions include:
 - Generating a weekly timetable.
 - Displaying venue usage in a chart.
 
-## Acknowledgements
-
-- Python documentation: https://docs.python.org/3/
-- Allen B. Downey, *Think Python*.
-- Course material for Computational Thinking and Programming (2026CSAE100).
-
----
-
-**Note:** This is a command-line Python project. Run it from a terminal to use the interactive menu.
