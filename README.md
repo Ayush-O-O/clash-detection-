@@ -135,4 +135,13 @@ Possible extensions include:
 - Checking venue capacity against expected attendance.
 - Generating a weekly timetable.
 - Displaying venue usage in a chart.
+- ## Acknowledgements
+
+- Python documentation: https://docs.python.org/3/
+- Allen B. Downey, *Think Python*.
+- Course material for Computational Thinking and Programming (2026CSAE100).
+
+---
+
+
 
