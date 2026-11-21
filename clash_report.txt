@@ -1,0 +1,64 @@
+CAMPUS EVENT CLASH REPORT
+Generated: 21-11-2026 12:45
+
+Clash 1: Venue clash + Organizer clash on 05-11-2026
+  #311 Coding Rehearsal | Coding Club | Sports Ground | 13:00-14:00
+  #195 Coding Rehearsal | Coding Club | Sports Ground | 13:30-15:00
+
+Clash 2: Venue clash on 05-11-2026
+  #195 Coding Rehearsal | Coding Club | Sports Ground | 13:30-15:00
+  #122 Music Showcase | Music Club | Sports Ground | 14:30-16:30
+
+Clash 3: Venue clash on 05-11-2026
+  #122 Music Showcase | Music Club | Sports Ground | 14:30-16:30
+  #404 AI Hackathon | AI Club | Sports Ground | 15:00-16:30
+
+Clash 4: Venue clash on 06-11-2026
+  #13 Robotics Quiz | Robotics Club | Room 102 | 09:30-11:30
+  #95 Sports Quiz | Sports Club | Room 102 | 10:30-12:00
+
+Clash 5: Organizer clash on 06-11-2026
+  #267 Coding Orientation | Coding Club | Room 101 | 09:30-12:00
+  #326 Coding Meetup | Coding Club | Seminar Hall | 11:00-13:00
+
+Clash 6: Venue clash on 08-11-2026
+  #60 Music Practice Session | Music Club | Room 101 | 09:30-12:00
+  #352 Cyber Bootcamp | Cyber Security Club | Room 101 | 11:00-12:00
+
+Clash 7: Venue clash on 02-12-2026
+  #89 Drama Seminar | Drama Club | Auditorium | 12:00-13:30
+  #98 Cyber Meetup | Cyber Security Club | Auditorium | 13:00-15:30
+
+Clash 8: Venue clash + Organizer clash on 02-12-2026
+  #269 Coding Quiz | Coding Club | Room 101 | 12:00-15:00
+  #18 Coding Quiz | Coding Club | Room 101 | 13:00-15:00
+
+Clash 9: Organizer clash on 02-12-2026
+  #98 Cyber Meetup | Cyber Security Club | Auditorium | 13:00-15:30
+  #113 Cyber Practice Session | Cyber Security Club | Seminar Hall | 13:00-14:30
+
+Clash 10: Venue clash on 05-12-2026
+  #118 Dance Showcase | Dance Club | Room 101 | 12:00-14:00
+  #125 Literary Orientation | Literary Society | Room 101 | 13:30-15:00
+
+Clash 11: Venue clash on 11-12-2026
+  #61 Photography Showcase | Photography Club | Auditorium | 13:00-16:00
+  #228 Drama Orientation | Drama Club | Auditorium | 15:00-17:00
+
+Clash 12: Organizer clash on 20-12-2026
+  #133 Cyber Bootcamp | Cyber Security Club | Sports Ground | 12:00-14:30
+  #124 Cyber Practice Session | Cyber Security Club | Room 102 | 12:30-15:30
+
+Clash 13: Venue clash on 20-12-2026
+  #133 Cyber Bootcamp | Cyber Security Club | Sports Ground | 12:00-14:30
+  #175 Sports Seminar | Sports Club | Sports Ground | 12:30-15:00
+
+Clash 14: Venue clash on 20-12-2026
+  #213 Eco Hackathon | Eco Club | Auditorium | 13:30-15:00
+  #302 Music Seminar | Music Club | Auditorium | 14:00-15:00
+
+Clash 15: Venue clash on 21-12-2026
+  #157 Coding Competition | Coding Club | Auditorium | 13:00-15:30
+  #48 Sports Workshop | Sports Club | Auditorium | 15:00-18:00
+
+Total clashes: 15

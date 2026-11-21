@@ -1,0 +1,413 @@
+id,name,club,venue,date,start,end
+1,Dance Showcase,Dance Club,Sports Ground,08-12-2026,13:00,14:00
+2,Coding Showcase,Coding Club,Room 102,27-12-2026,10:00,13:00
+3,Drama Competition,Drama Club,Auditorium,27-12-2026,14:30,16:00
+4,AI Talk,AI Club,Sports Ground,14-11-2026,11:00,14:00
+5,Literary Practice Session,Literary Society,Seminar Hall,18-11-2026,10:30,13:30
+6,Literary Seminar,Literary Society,Auditorium,04-11-2026,15:30,18:00
+7,Dance Competition,Dance Club,Room 101,28-12-2026,12:30,15:30
+8,Eco Hackathon,Eco Club,Room 101,20-11-2026,09:30,10:30
+9,Coding Hackathon,Coding Club,Sports Ground,15-11-2026,09:30,11:00
+10,Drama Meetup,Drama Club,Sports Ground,07-12-2026,16:30,18:00
+11,Drama Hackathon,Drama Club,Room 101,02-11-2026,16:00,18:00
+12,Eco Rehearsal,Eco Club,Room 101,21-12-2026,13:00,15:00
+13,Robotics Quiz,Robotics Club,Room 102,06-11-2026,09:30,11:30
+14,Music Seminar,Music Club,Room 101,15-11-2026,12:00,13:00
+15,Dance Showcase,Dance Club,Room 101,05-11-2026,09:00,11:00
+16,Coding Bootcamp,Coding Club,Sports Ground,18-12-2026,09:00,12:00
+17,Coding Competition,Coding Club,Auditorium,30-12-2026,16:00,18:00
+18,Coding Quiz,Coding Club,Room 101,02-12-2026,13:00,15:00
+19,Coding Meetup,Coding Club,Seminar Hall,15-11-2026,16:00,17:30
+20,Robotics Hackathon,Robotics Club,Room 102,25-12-2026,12:30,15:30
+21,Entrepreneurship Seminar,Entrepreneurship Cell,Seminar Hall,29-11-2026,09:30,10:30
+22,Cyber Showcase,Cyber Security Club,Room 102,03-11-2026,15:00,16:30
+23,Eco Hackathon,Eco Club,Sports Ground,26-12-2026,14:00,15:30
+24,Drama Meetup,Drama Club,Seminar Hall,18-12-2026,11:30,14:30
+25,Photography Seminar,Photography Club,Auditorium,21-11-2026,14:30,17:00
+26,AI Showcase,AI Club,Room 101,20-12-2026,12:30,15:00
+27,Sports Practice Session,Sports Club,Room 101,29-12-2026,11:00,13:00
+28,Music Competition,Music Club,Auditorium,06-11-2026,15:30,18:00
+29,AI Orientation,AI Club,Room 101,03-11-2026,13:30,14:30
+30,Eco Rehearsal,Eco Club,Sports Ground,18-11-2026,15:30,17:30
+31,Drama Meetup,Drama Club,Room 101,24-11-2026,14:30,16:30
+32,Drama Talk,Drama Club,Room 102,07-11-2026,10:00,11:30
+33,Coding Talk,Coding Club,Auditorium,22-11-2026,13:00,14:30
+34,Robotics Showcase,Robotics Club,Auditorium,01-12-2026,11:30,13:30
+35,Robotics Practice Session,Robotics Club,Room 102,13-11-2026,11:00,12:30
+36,Literary Workshop,Literary Society,Sports Ground,20-11-2026,15:30,18:00
+37,Photography Quiz,Photography Club,Room 101,02-12-2026,11:00,12:00
+38,Photography Meetup,Photography Club,Seminar Hall,27-12-2026,15:30,17:00
+39,Sports Competition,Sports Club,Seminar Hall,19-11-2026,12:30,13:30
+40,Entrepreneurship Workshop,Entrepreneurship Cell,Sports Ground,21-12-2026,13:00,16:00
+41,Eco Talk,Eco Club,Auditorium,29-12-2026,15:30,17:00
+42,Robotics Meetup,Robotics Club,Room 102,28-12-2026,09:30,10:30
+43,Sports Meetup,Sports Club,Auditorium,09-12-2026,16:00,17:30
+44,Literary Bootcamp,Literary Society,Auditorium,07-12-2026,16:00,17:30
+45,Cyber Competition,Cyber Security Club,Sports Ground,15-11-2026,11:00,13:30
+46,Dance Bootcamp,Dance Club,Seminar Hall,10-12-2026,15:00,17:00
+47,Music Competition,Music Club,Sports Ground,20-11-2026,13:30,15:00
+48,Sports Workshop,Sports Club,Auditorium,21-12-2026,15:00,18:00
+49,Eco Meetup,Eco Club,Auditorium,15-11-2026,09:30,10:30
+50,Literary Workshop,Literary Society,Room 102,30-11-2026,14:00,16:00
+51,Eco Rehearsal,Eco Club,Seminar Hall,29-11-2026,15:00,17:00
+52,AI Rehearsal,AI Club,Room 101,21-11-2026,11:30,12:30
+53,Literary Seminar,Literary Society,Room 102,08-12-2026,14:00,16:00
+54,Coding Competition,Coding Club,Sports Ground,18-12-2026,15:30,18:00
+55,AI Bootcamp,AI Club,Room 101,01-11-2026,12:30,15:00
+56,AI Rehearsal,AI Club,Room 102,15-11-2026,14:30,17:00
+57,Sports Competition,Sports Club,Seminar Hall,04-12-2026,15:00,16:00
+58,Sports Orientation,Sports Club,Auditorium,14-12-2026,13:00,14:00
+59,Robotics Talk,Robotics Club,Room 101,05-12-2026,15:00,17:00
+60,Music Practice Session,Music Club,Room 101,08-11-2026,09:30,12:00
+61,Photography Showcase,Photography Club,Auditorium,11-12-2026,13:00,16:00
+62,AI Orientation,AI Club,Sports Ground,16-11-2026,14:00,16:00
+63,Literary Quiz,Literary Society,Room 101,22-12-2026,14:00,16:30
+64,Robotics Hackathon,Robotics Club,Auditorium,29-11-2026,16:00,17:30
+65,Photography Bootcamp,Photography Club,Room 101,11-11-2026,11:30,13:00
+66,Sports Rehearsal,Sports Club,Room 102,06-11-2026,13:30,15:00
+67,Cyber Practice Session,Cyber Security Club,Room 102,17-11-2026,14:30,17:00
+68,Music Meetup,Music Club,Auditorium,01-12-2026,09:30,10:30
+69,Coding Talk,Coding Club,Auditorium,04-12-2026,13:30,15:00
+70,Cyber Seminar,Cyber Security Club,Room 101,16-12-2026,15:00,17:30
+71,Robotics Competition,Robotics Club,Room 101,18-12-2026,13:00,16:00
+72,Robotics Practice Session,Robotics Club,Auditorium,19-11-2026,14:00,17:00
+73,Literary Competition,Literary Society,Seminar Hall,03-11-2026,14:30,15:30
+74,Robotics Competition,Robotics Club,Auditorium,16-12-2026,09:00,11:30
+75,Eco Talk,Eco Club,Seminar Hall,30-11-2026,14:30,16:00
+76,Drama Competition,Drama Club,Room 102,08-12-2026,09:00,12:00
+77,Drama Competition,Drama Club,Auditorium,21-12-2026,09:00,11:30
+78,Dance Hackathon,Dance Club,Auditorium,03-11-2026,13:30,15:00
+79,Eco Quiz,Eco Club,Seminar Hall,12-11-2026,15:00,16:30
+80,AI Quiz,AI Club,Sports Ground,11-12-2026,17:00,18:00
+81,Entrepreneurship Showcase,Entrepreneurship Cell,Room 102,23-12-2026,14:00,17:00
+82,Entrepreneurship Seminar,Entrepreneurship Cell,Auditorium,20-11-2026,10:30,12:30
+83,Entrepreneurship Quiz,Entrepreneurship Cell,Room 102,25-11-2026,10:00,11:30
+84,Music Bootcamp,Music Club,Room 102,11-11-2026,13:30,16:30
+85,Robotics Hackathon,Robotics Club,Room 101,25-11-2026,12:00,13:30
+86,Robotics Quiz,Robotics Club,Sports Ground,02-12-2026,09:30,11:00
+87,Eco Rehearsal,Eco Club,Room 102,22-12-2026,12:30,13:30
+88,Sports Showcase,Sports Club,Sports Ground,02-11-2026,13:30,16:00
+89,Drama Seminar,Drama Club,Auditorium,02-12-2026,12:00,13:30
+90,Cyber Hackathon,Cyber Security Club,Seminar Hall,05-11-2026,09:00,10:30
+91,Cyber Orientation,Cyber Security Club,Seminar Hall,07-11-2026,13:30,14:30
+92,Photography Showcase,Photography Club,Sports Ground,03-12-2026,15:00,16:00
+93,Dance Talk,Dance Club,Sports Ground,29-11-2026,15:30,17:00
+94,Drama Orientation,Drama Club,Auditorium,05-12-2026,10:00,11:00
+95,Sports Quiz,Sports Club,Room 102,06-11-2026,10:30,12:00
+96,Sports Workshop,Sports Club,Sports Ground,10-11-2026,10:00,12:30
+97,Entrepreneurship Bootcamp,Entrepreneurship Cell,Sports Ground,02-11-2026,10:30,13:30
+98,Cyber Meetup,Cyber Security Club,Auditorium,02-12-2026,13:00,15:30
+99,Dance Quiz,Dance Club,Seminar Hall,07-12-2026,16:30,18:00
+100,Eco Talk,Eco Club,Seminar Hall,23-12-2026,11:00,12:00
+101,Eco Competition,Eco Club,Auditorium,19-12-2026,12:00,13:30
+102,Drama Practice Session,Drama Club,Room 101,24-11-2026,10:30,12:30
+103,Entrepreneurship Competition,Entrepreneurship Cell,Room 101,06-12-2026,16:30,18:00
+104,Literary Hackathon,Literary Society,Room 102,14-12-2026,10:00,13:00
+105,Entrepreneurship Practice Session,Entrepreneurship Cell,Seminar Hall,01-11-2026,15:30,17:00
+106,Dance Bootcamp,Dance Club,Room 102,08-11-2026,14:30,16:00
+107,Coding Talk,Coding Club,Auditorium,14-11-2026,10:30,12:30
+108,Coding Talk,Coding Club,Auditorium,06-12-2026,14:30,16:30
+109,Music Orientation,Music Club,Room 101,08-12-2026,14:00,16:30
+110,Drama Rehearsal,Drama Club,Room 101,15-12-2026,15:00,16:30
+111,Music Talk,Music Club,Sports Ground,25-11-2026,15:30,17:30
+112,Robotics Meetup,Robotics Club,Seminar Hall,16-12-2026,15:00,16:30
+113,Cyber Practice Session,Cyber Security Club,Seminar Hall,02-12-2026,13:00,14:30
+114,Dance Competition,Dance Club,Room 101,27-12-2026,10:00,12:00
+115,Sports Seminar,Sports Club,Room 101,12-11-2026,14:00,17:00
+116,Drama Hackathon,Drama Club,Sports Ground,30-12-2026,11:00,13:00
+117,Drama Talk,Drama Club,Seminar Hall,04-12-2026,11:30,14:00
+118,Dance Showcase,Dance Club,Room 101,05-12-2026,12:00,14:00
+119,Robotics Bootcamp,Robotics Club,Auditorium,29-11-2026,14:00,15:00
+120,Entrepreneurship Rehearsal,Entrepreneurship Cell,Auditorium,04-12-2026,10:00,11:30
+121,Literary Meetup,Literary Society,Sports Ground,05-11-2026,09:00,12:00
+122,Music Showcase,Music Club,Sports Ground,05-11-2026,14:30,16:30
+123,Dance Talk,Dance Club,Seminar Hall,02-12-2026,10:30,13:00
+124,Cyber Practice Session,Cyber Security Club,Room 102,20-12-2026,12:30,15:30
+125,Literary Orientation,Literary Society,Room 101,05-12-2026,13:30,15:00
+126,Sports Practice Session,Sports Club,Seminar Hall,28-11-2026,16:30,18:00
+127,Robotics Showcase,Robotics Club,Room 101,06-11-2026,12:00,15:00
+128,Sports Practice Session,Sports Club,Sports Ground,01-11-2026,11:00,14:00
+129,Dance Rehearsal,Dance Club,Room 101,27-11-2026,12:30,15:00
+130,Entrepreneurship Quiz,Entrepreneurship Cell,Seminar Hall,30-11-2026,09:00,12:00
+131,Music Quiz,Music Club,Auditorium,03-12-2026,14:30,17:30
+132,Photography Competition,Photography Club,Auditorium,05-12-2026,11:00,12:30
+133,Cyber Bootcamp,Cyber Security Club,Sports Ground,20-12-2026,12:00,14:30
+134,Dance Practice Session,Dance Club,Auditorium,22-11-2026,16:00,17:30
+135,Dance Bootcamp,Dance Club,Seminar Hall,03-12-2026,12:30,15:30
+136,Literary Hackathon,Literary Society,Seminar Hall,24-11-2026,11:00,14:00
+137,Photography Workshop,Photography Club,Room 102,30-12-2026,11:00,14:00
+138,Sports Competition,Sports Club,Auditorium,28-12-2026,09:00,10:00
+139,AI Orientation,AI Club,Seminar Hall,23-11-2026,12:00,14:30
+140,Entrepreneurship Hackathon,Entrepreneurship Cell,Room 101,19-12-2026,15:00,17:30
+141,Photography Competition,Photography Club,Room 102,01-12-2026,14:30,15:30
+142,Eco Talk,Eco Club,Seminar Hall,06-11-2026,13:30,16:00
+143,AI Talk,AI Club,Seminar Hall,24-11-2026,14:30,17:00
+144,Drama Seminar,Drama Club,Auditorium,15-11-2026,14:00,15:00
+145,Coding Practice Session,Coding Club,Room 102,27-11-2026,11:00,12:30
+146,AI Seminar,AI Club,Room 101,29-11-2026,09:00,11:30
+147,Coding Quiz,Coding Club,Auditorium,13-12-2026,11:30,14:00
+148,Music Competition,Music Club,Seminar Hall,21-11-2026,14:30,17:00
+149,Photography Seminar,Photography Club,Room 101,01-12-2026,12:30,13:30
+150,Robotics Seminar,Robotics Club,Auditorium,08-12-2026,11:30,14:00
+151,Cyber Showcase,Cyber Security Club,Sports Ground,17-12-2026,11:30,14:30
+152,Eco Orientation,Eco Club,Auditorium,25-12-2026,12:00,15:00
+153,Cyber Seminar,Cyber Security Club,Room 101,10-12-2026,11:00,14:00
+154,Eco Workshop,Eco Club,Seminar Hall,12-12-2026,12:30,15:00
+155,Photography Showcase,Photography Club,Sports Ground,09-11-2026,11:30,13:30
+156,Dance Orientation,Dance Club,Room 101,02-11-2026,12:30,13:30
+157,Coding Competition,Coding Club,Auditorium,21-12-2026,13:00,15:30
+158,Literary Workshop,Literary Society,Room 101,14-11-2026,11:30,14:30
+159,Literary Showcase,Literary Society,Room 102,13-12-2026,12:00,15:00
+160,Sports Competition,Sports Club,Sports Ground,11-11-2026,14:30,16:30
+161,Eco Hackathon,Eco Club,Room 101,27-12-2026,14:00,16:30
+162,Robotics Competition,Robotics Club,Room 101,24-12-2026,09:00,10:00
+163,Drama Quiz,Drama Club,Room 102,26-11-2026,14:30,16:00
+164,Drama Seminar,Drama Club,Auditorium,28-11-2026,12:30,13:30
+165,Dance Practice Session,Dance Club,Sports Ground,09-11-2026,09:00,11:00
+166,Sports Rehearsal,Sports Club,Room 102,07-11-2026,13:30,15:00
+167,Eco Competition,Eco Club,Room 101,20-11-2026,16:00,17:00
+168,Entrepreneurship Talk,Entrepreneurship Cell,Room 101,04-11-2026,09:30,12:30
+169,Literary Seminar,Literary Society,Room 102,22-11-2026,11:00,13:30
+170,Photography Orientation,Photography Club,Room 101,15-12-2026,11:30,14:00
+171,Coding Showcase,Coding Club,Room 101,24-12-2026,12:00,14:30
+172,Music Hackathon,Music Club,Room 102,22-12-2026,16:00,17:00
+173,Music Showcase,Music Club,Auditorium,01-11-2026,13:30,15:30
+174,Eco Rehearsal,Eco Club,Room 102,09-11-2026,12:30,13:30
+175,Sports Seminar,Sports Club,Sports Ground,20-12-2026,12:30,15:00
+176,Coding Meetup,Coding Club,Room 102,20-11-2026,12:00,13:30
+177,Drama Workshop,Drama Club,Auditorium,29-12-2026,09:30,12:30
+178,AI Seminar,AI Club,Room 102,05-12-2026,09:00,11:00
+179,Coding Talk,Coding Club,Sports Ground,23-11-2026,15:30,17:00
+180,Literary Talk,Literary Society,Seminar Hall,16-12-2026,12:30,15:00
+181,Entrepreneurship Rehearsal,Entrepreneurship Cell,Room 101,18-11-2026,13:30,15:30
+182,Drama Hackathon,Drama Club,Seminar Hall,21-11-2026,10:30,12:30
+183,AI Practice Session,AI Club,Seminar Hall,26-12-2026,09:00,12:00
+184,Entrepreneurship Meetup,Entrepreneurship Cell,Room 102,15-12-2026,13:30,14:30
+185,Entrepreneurship Showcase,Entrepreneurship Cell,Room 102,24-12-2026,11:30,14:30
+186,Cyber Bootcamp,Cyber Security Club,Seminar Hall,20-11-2026,09:30,12:00
+187,AI Seminar,AI Club,Seminar Hall,09-12-2026,13:30,16:00
+188,Robotics Seminar,Robotics Club,Seminar Hall,02-11-2026,14:00,15:30
+189,Photography Talk,Photography Club,Sports Ground,18-12-2026,12:30,14:00
+190,AI Quiz,AI Club,Room 102,19-11-2026,14:00,16:30
+191,Entrepreneurship Competition,Entrepreneurship Cell,Room 101,10-12-2026,10:00,11:00
+192,Cyber Rehearsal,Cyber Security Club,Auditorium,28-12-2026,15:30,16:30
+193,Coding Seminar,Coding Club,Auditorium,23-12-2026,09:00,10:00
+194,Dance Rehearsal,Dance Club,Auditorium,20-12-2026,09:00,10:00
+195,Coding Rehearsal,Coding Club,Sports Ground,05-11-2026,13:30,15:00
+196,Photography Seminar,Photography Club,Seminar Hall,22-11-2026,12:30,15:30
+197,Coding Competition,Coding Club,Room 102,25-11-2026,16:00,17:30
+198,Dance Hackathon,Dance Club,Seminar Hall,11-12-2026,12:30,15:30
+199,Entrepreneurship Orientation,Entrepreneurship Cell,Sports Ground,22-12-2026,10:30,13:30
+200,Dance Practice Session,Dance Club,Sports Ground,17-11-2026,10:30,12:00
+201,Photography Competition,Photography Club,Seminar Hall,03-11-2026,11:30,14:00
+202,Cyber Quiz,Cyber Security Club,Auditorium,11-11-2026,11:30,13:00
+203,Dance Quiz,Dance Club,Room 101,23-12-2026,11:00,14:00
+204,Coding Bootcamp,Coding Club,Room 101,30-12-2026,10:30,12:00
+205,Cyber Competition,Cyber Security Club,Room 101,04-11-2026,14:00,16:30
+206,Dance Practice Session,Dance Club,Auditorium,25-11-2026,12:30,14:30
+207,Robotics Seminar,Robotics Club,Room 102,24-11-2026,12:00,14:00
+208,Coding Orientation,Coding Club,Room 102,06-12-2026,11:30,14:30
+209,Music Quiz,Music Club,Auditorium,29-12-2026,12:30,13:30
+210,Literary Competition,Literary Society,Room 101,11-12-2026,10:30,12:30
+211,Eco Practice Session,Eco Club,Room 101,16-12-2026,12:00,14:00
+212,Literary Seminar,Literary Society,Seminar Hall,27-11-2026,14:00,15:00
+213,Eco Hackathon,Eco Club,Auditorium,20-12-2026,13:30,15:00
+214,Literary Seminar,Literary Society,Auditorium,26-12-2026,13:30,15:30
+215,Sports Practice Session,Sports Club,Seminar Hall,14-12-2026,14:00,17:00
+216,Dance Competition,Dance Club,Seminar Hall,26-11-2026,10:00,12:30
+217,Music Hackathon,Music Club,Room 101,14-11-2026,09:30,11:30
+218,Dance Workshop,Dance Club,Room 101,03-12-2026,09:30,12:00
+219,Coding Quiz,Coding Club,Sports Ground,08-12-2026,15:30,17:00
+220,Eco Workshop,Eco Club,Room 102,21-12-2026,11:00,12:30
+221,Dance Rehearsal,Dance Club,Room 102,21-12-2026,14:00,17:00
+222,AI Meetup,AI Club,Room 101,07-11-2026,11:30,14:00
+223,AI Quiz,AI Club,Seminar Hall,25-11-2026,12:30,15:30
+224,Literary Seminar,Literary Society,Room 101,30-11-2026,10:00,13:00
+225,Entrepreneurship Orientation,Entrepreneurship Cell,Room 102,05-11-2026,13:00,15:30
+226,Eco Orientation,Eco Club,Auditorium,28-11-2026,10:30,11:30
+227,Music Talk,Music Club,Room 102,21-11-2026,09:30,12:30
+228,Drama Orientation,Drama Club,Auditorium,11-12-2026,15:00,17:00
+229,Entrepreneurship Meetup,Entrepreneurship Cell,Sports Ground,22-11-2026,15:30,16:30
+230,Drama Quiz,Drama Club,Auditorium,04-11-2026,12:30,15:30
+231,Cyber Hackathon,Cyber Security Club,Room 102,29-11-2026,12:30,15:30
+232,AI Hackathon,AI Club,Auditorium,30-11-2026,13:30,16:30
+233,Dance Competition,Dance Club,Room 101,22-11-2026,09:00,10:30
+234,Robotics Quiz,Robotics Club,Seminar Hall,15-11-2026,14:30,15:30
+235,Music Meetup,Music Club,Auditorium,14-11-2026,14:30,17:30
+236,Drama Bootcamp,Drama Club,Room 102,27-11-2026,12:30,13:30
+237,Drama Showcase,Drama Club,Room 102,14-12-2026,15:30,16:30
+238,Entrepreneurship Rehearsal,Entrepreneurship Cell,Auditorium,17-12-2026,14:30,17:00
+239,Entrepreneurship Competition,Entrepreneurship Cell,Room 101,10-12-2026,17:00,18:00
+240,Literary Practice Session,Literary Society,Room 102,24-12-2026,15:30,16:30
+241,Entrepreneurship Orientation,Entrepreneurship Cell,Seminar Hall,23-11-2026,09:30,12:00
+242,Coding Bootcamp,Coding Club,Seminar Hall,21-12-2026,10:00,12:30
+243,Photography Quiz,Photography Club,Room 101,30-11-2026,13:00,14:00
+244,Eco Orientation,Eco Club,Room 102,14-11-2026,13:00,15:00
+245,AI Talk,AI Club,Sports Ground,11-12-2026,11:00,12:00
+246,Sports Practice Session,Sports Club,Sports Ground,21-11-2026,10:30,13:30
+247,Photography Quiz,Photography Club,Sports Ground,09-12-2026,10:30,13:30
+248,Photography Showcase,Photography Club,Seminar Hall,16-12-2026,10:00,11:30
+249,Music Meetup,Music Club,Room 101,19-12-2026,09:30,12:30
+250,Coding Practice Session,Coding Club,Auditorium,06-11-2026,13:00,14:00
+251,Cyber Meetup,Cyber Security Club,Sports Ground,06-11-2026,13:00,15:30
+252,Coding Hackathon,Coding Club,Seminar Hall,05-12-2026,15:00,16:00
+253,Eco Practice Session,Eco Club,Sports Ground,28-12-2026,11:30,13:00
+254,Sports Rehearsal,Sports Club,Seminar Hall,11-11-2026,10:00,13:00
+255,Entrepreneurship Workshop,Entrepreneurship Cell,Seminar Hall,03-12-2026,09:30,10:30
+256,Eco Hackathon,Eco Club,Room 102,09-12-2026,09:00,11:00
+257,Robotics Practice Session,Robotics Club,Sports Ground,29-12-2026,13:30,14:30
+258,Robotics Orientation,Robotics Club,Seminar Hall,04-12-2026,10:00,11:00
+259,Eco Seminar,Eco Club,Room 102,30-11-2026,10:30,12:30
+260,Music Orientation,Music Club,Room 101,05-12-2026,10:00,12:00
+261,Photography Talk,Photography Club,Seminar Hall,28-12-2026,11:30,14:00
+262,Drama Meetup,Drama Club,Room 102,26-12-2026,13:00,14:00
+263,Sports Meetup,Sports Club,Seminar Hall,08-12-2026,14:30,15:30
+264,Dance Talk,Dance Club,Auditorium,10-12-2026,12:30,14:00
+265,AI Showcase,AI Club,Room 101,11-12-2026,15:30,17:00
+266,Sports Rehearsal,Sports Club,Auditorium,12-11-2026,09:00,11:00
+267,Coding Orientation,Coding Club,Room 101,06-11-2026,09:30,12:00
+268,Photography Seminar,Photography Club,Auditorium,11-11-2026,09:00,11:30
+269,Coding Quiz,Coding Club,Room 101,02-12-2026,12:00,15:00
+270,Drama Competition,Drama Club,Room 101,20-11-2026,11:00,12:00
+271,Eco Workshop,Eco Club,Seminar Hall,21-11-2026,13:30,14:30
+272,Sports Talk,Sports Club,Room 102,16-11-2026,16:00,18:00
+273,Sports Talk,Sports Club,Sports Ground,15-11-2026,16:30,17:30
+274,Robotics Rehearsal,Robotics Club,Auditorium,17-11-2026,11:30,14:00
+275,Literary Meetup,Literary Society,Auditorium,16-11-2026,13:30,16:00
+276,Drama Quiz,Drama Club,Seminar Hall,19-12-2026,11:00,12:00
+277,Photography Competition,Photography Club,Seminar Hall,01-11-2026,12:00,13:30
+278,Drama Hackathon,Drama Club,Room 102,24-11-2026,16:30,18:00
+279,Drama Orientation,Drama Club,Sports Ground,19-12-2026,14:00,16:30
+280,Eco Seminar,Eco Club,Room 101,01-12-2026,10:00,12:00
+281,Sports Orientation,Sports Club,Room 102,26-12-2026,10:00,12:00
+282,Sports Orientation,Sports Club,Sports Ground,12-12-2026,12:30,14:30
+283,Drama Competition,Drama Club,Room 102,14-11-2026,10:30,12:30
+284,Dance Quiz,Dance Club,Room 102,03-11-2026,09:00,11:30
+285,Photography Meetup,Photography Club,Room 101,13-12-2026,12:30,14:30
+286,Cyber Quiz,Cyber Security Club,Room 101,13-12-2026,14:30,15:30
+287,Drama Talk,Drama Club,Seminar Hall,17-12-2026,16:00,17:30
+288,Coding Talk,Coding Club,Sports Ground,23-12-2026,15:00,17:30
+289,Photography Seminar,Photography Club,Seminar Hall,06-12-2026,10:00,13:00
+290,Literary Orientation,Literary Society,Auditorium,23-12-2026,15:00,16:00
+291,Sports Competition,Sports Club,Auditorium,23-11-2026,09:30,12:30
+292,Robotics Hackathon,Robotics Club,Room 102,06-12-2026,15:30,16:30
+293,Literary Competition,Literary Society,Room 101,05-11-2026,15:30,17:00
+294,Literary Bootcamp,Literary Society,Room 102,27-11-2026,15:30,17:00
+295,Literary Bootcamp,Literary Society,Seminar Hall,08-11-2026,12:30,13:30
+296,Dance Quiz,Dance Club,Seminar Hall,18-11-2026,15:00,18:00
+297,Eco Rehearsal,Eco Club,Room 102,04-11-2026,15:30,16:30
+298,AI Practice Session,AI Club,Seminar Hall,20-11-2026,15:00,16:30
+299,AI Meetup,AI Club,Auditorium,27-12-2026,09:30,11:00
+300,AI Workshop,AI Club,Seminar Hall,26-12-2026,15:30,16:30
+301,Sports Bootcamp,Sports Club,Seminar Hall,14-11-2026,15:00,18:00
+302,Music Seminar,Music Club,Auditorium,20-12-2026,14:00,15:00
+303,Dance Orientation,Dance Club,Sports Ground,09-11-2026,13:30,16:30
+304,AI Rehearsal,AI Club,Auditorium,09-11-2026,14:30,15:30
+305,Music Rehearsal,Music Club,Room 102,28-12-2026,14:30,15:30
+306,AI Workshop,AI Club,Room 102,16-11-2026,09:30,11:30
+307,Entrepreneurship Rehearsal,Entrepreneurship Cell,Seminar Hall,10-11-2026,13:30,15:00
+308,Entrepreneurship Showcase,Entrepreneurship Cell,Room 102,19-12-2026,12:00,13:30
+309,Music Quiz,Music Club,Seminar Hall,16-11-2026,16:00,17:00
+310,Cyber Quiz,Cyber Security Club,Room 101,21-11-2026,12:30,15:30
+311,Coding Rehearsal,Coding Club,Sports Ground,05-11-2026,13:00,14:00
+312,Cyber Showcase,Cyber Security Club,Seminar Hall,26-12-2026,13:30,14:30
+313,Coding Workshop,Coding Club,Room 101,19-11-2026,15:30,17:30
+314,Drama Quiz,Drama Club,Sports Ground,28-11-2026,09:30,11:30
+315,Robotics Hackathon,Robotics Club,Seminar Hall,20-12-2026,11:00,12:30
+316,Music Bootcamp,Music Club,Seminar Hall,19-11-2026,14:30,17:00
+317,Photography Showcase,Photography Club,Seminar Hall,29-12-2026,11:00,13:30
+318,Cyber Seminar,Cyber Security Club,Room 101,18-11-2026,10:30,12:00
+319,Cyber Quiz,Cyber Security Club,Seminar Hall,06-12-2026,13:00,14:30
+320,Literary Hackathon,Literary Society,Room 102,06-12-2026,17:00,18:00
+321,Eco Bootcamp,Eco Club,Sports Ground,15-12-2026,15:30,17:30
+322,Photography Competition,Photography Club,Room 101,17-12-2026,14:00,17:00
+323,Coding Practice Session,Coding Club,Room 102,10-12-2026,11:00,13:30
+324,Cyber Orientation,Cyber Security Club,Auditorium,06-11-2026,10:00,12:30
+325,AI Quiz,AI Club,Seminar Hall,13-12-2026,13:30,16:30
+326,Coding Meetup,Coding Club,Seminar Hall,06-11-2026,11:00,13:00
+327,AI Seminar,AI Club,Seminar Hall,29-12-2026,14:00,16:00
+328,Cyber Rehearsal,Cyber Security Club,Auditorium,02-11-2026,10:30,12:30
+329,Sports Hackathon,Sports Club,Room 102,26-12-2026,16:00,17:00
+330,Music Competition,Music Club,Room 101,16-12-2026,10:00,11:00
+331,Entrepreneurship Talk,Entrepreneurship Cell,Seminar Hall,22-12-2026,16:00,17:00
+332,Coding Talk,Coding Club,Room 102,23-11-2026,12:00,14:00
+333,Dance Hackathon,Dance Club,Sports Ground,19-11-2026,10:30,13:00
+334,Cyber Orientation,Cyber Security Club,Room 102,01-11-2026,15:30,18:00
+335,Music Talk,Music Club,Auditorium,09-12-2026,12:30,14:00
+336,Eco Showcase,Eco Club,Room 102,22-12-2026,09:30,11:00
+337,Cyber Showcase,Cyber Security Club,Sports Ground,27-11-2026,16:00,17:30
+338,AI Workshop,AI Club,Room 102,12-11-2026,11:00,14:00
+339,Cyber Hackathon,Cyber Security Club,Seminar Hall,01-11-2026,14:00,15:00
+340,Entrepreneurship Talk,Entrepreneurship Cell,Sports Ground,19-11-2026,15:30,17:30
+341,Coding Seminar,Coding Club,Room 102,20-11-2026,15:30,18:00
+342,Literary Workshop,Literary Society,Room 102,30-12-2026,15:30,16:30
+343,Dance Workshop,Dance Club,Auditorium,07-12-2026,12:00,13:00
+344,Literary Seminar,Literary Society,Room 101,23-11-2026,12:00,15:00
+345,Drama Meetup,Drama Club,Sports Ground,04-11-2026,09:30,11:30
+346,Sports Workshop,Sports Club,Sports Ground,13-12-2026,11:30,14:00
+347,AI Rehearsal,AI Club,Room 101,09-11-2026,11:30,14:00
+348,Coding Orientation,Coding Club,Room 101,01-12-2026,14:00,17:00
+349,Dance Bootcamp,Dance Club,Room 102,09-12-2026,14:00,15:30
+350,Eco Practice Session,Eco Club,Room 102,15-12-2026,09:30,12:00
+351,Dance Seminar,Dance Club,Room 102,28-11-2026,09:00,11:30
+352,Cyber Bootcamp,Cyber Security Club,Room 101,08-11-2026,11:00,12:00
+353,Music Meetup,Music Club,Auditorium,19-12-2026,15:30,17:00
+354,Literary Showcase,Literary Society,Sports Ground,06-12-2026,16:00,17:00
+355,Robotics Rehearsal,Robotics Club,Room 101,16-11-2026,14:00,15:30
+356,AI Hackathon,AI Club,Auditorium,12-12-2026,09:00,12:00
+357,Literary Meetup,Literary Society,Room 101,29-11-2026,12:30,15:30
+358,Entrepreneurship Quiz,Entrepreneurship Cell,Seminar Hall,27-11-2026,12:00,13:00
+359,Photography Showcase,Photography Club,Room 102,07-12-2026,09:00,12:00
+360,AI Competition,AI Club,Sports Ground,14-12-2026,11:00,13:30
+361,Entrepreneurship Hackathon,Entrepreneurship Cell,Room 101,08-12-2026,09:00,10:30
+362,Sports Showcase,Sports Club,Sports Ground,06-12-2026,12:00,14:00
+363,Dance Quiz,Dance Club,Seminar Hall,05-11-2026,12:30,14:00
+364,Robotics Talk,Robotics Club,Seminar Hall,15-12-2026,14:00,16:30
+365,Dance Competition,Dance Club,Auditorium,07-12-2026,13:00,15:00
+366,Drama Practice Session,Drama Club,Sports Ground,01-11-2026,16:00,17:00
+367,Entrepreneurship Talk,Entrepreneurship Cell,Sports Ground,13-11-2026,14:30,16:00
+368,Cyber Orientation,Cyber Security Club,Auditorium,15-12-2026,10:00,11:30
+369,Dance Seminar,Dance Club,Room 101,06-12-2026,13:00,16:00
+370,AI Bootcamp,AI Club,Room 101,17-11-2026,10:30,11:30
+371,Drama Workshop,Drama Club,Auditorium,14-12-2026,16:30,18:00
+372,Robotics Seminar,Robotics Club,Room 102,17-12-2026,15:00,17:00
+373,Dance Hackathon,Dance Club,Seminar Hall,22-12-2026,10:30,13:00
+374,Literary Competition,Literary Society,Seminar Hall,22-11-2026,09:30,11:00
+375,Dance Orientation,Dance Club,Auditorium,30-11-2026,11:00,12:00
+376,Eco Hackathon,Eco Club,Auditorium,02-11-2026,14:00,16:00
+377,Music Competition,Music Club,Auditorium,12-11-2026,14:30,16:30
+378,Eco Rehearsal,Eco Club,Seminar Hall,02-12-2026,15:00,18:00
+379,Eco Orientation,Eco Club,Room 102,03-12-2026,12:00,14:00
+380,Sports Practice Session,Sports Club,Auditorium,30-12-2026,13:30,15:30
+381,Drama Showcase,Drama Club,Room 102,01-11-2026,11:00,12:30
+382,Eco Rehearsal,Eco Club,Seminar Hall,19-12-2026,16:00,18:00
+383,Sports Practice Session,Sports Club,Sports Ground,13-11-2026,11:00,13:30
+384,Entrepreneurship Workshop,Entrepreneurship Cell,Sports Ground,30-12-2026,13:00,15:30
+385,Entrepreneurship Quiz,Entrepreneurship Cell,Sports Ground,12-11-2026,15:30,17:00
+386,Eco Meetup,Eco Club,Sports Ground,28-11-2026,12:00,15:00
+387,Robotics Hackathon,Robotics Club,Sports Ground,30-11-2026,12:30,13:30
+388,Cyber Workshop,Cyber Security Club,Sports Ground,26-11-2026,11:30,14:30
+389,Literary Bootcamp,Literary Society,Sports Ground,27-11-2026,09:00,11:00
+390,Photography Quiz,Photography Club,Room 101,13-11-2026,14:30,16:00
+391,Eco Hackathon,Eco Club,Seminar Hall,09-11-2026,14:30,17:30
+392,Entrepreneurship Competition,Entrepreneurship Cell,Room 102,20-12-2026,09:30,11:30
+393,Music Competition,Music Club,Room 102,18-11-2026,14:30,17:30
+394,Photography Competition,Photography Club,Auditorium,23-11-2026,13:30,15:30
+395,Music Practice Session,Music Club,Sports Ground,26-12-2026,10:30,11:30
+396,Robotics Showcase,Robotics Club,Auditorium,14-12-2026,09:30,12:30
+397,AI Practice Session,AI Club,Seminar Hall,09-12-2026,09:00,12:00
+398,Drama Rehearsal,Drama Club,Auditorium,29-11-2026,12:30,13:30
+399,Eco Practice Session,Eco Club,Room 101,07-11-2026,15:30,17:30
+400,Robotics Competition,Robotics Club,Seminar Hall,24-12-2026,14:30,17:30
+401,Literary Seminar,Literary Society,Sports Ground,11-12-2026,13:30,15:30
+402,Photography Workshop,Photography Club,Room 102,07-12-2026,17:00,18:00
+403,Drama Meetup,Drama Club,Auditorium,26-11-2026,12:00,13:00
+404,AI Hackathon,AI Club,Sports Ground,05-11-2026,15:00,16:30
+405,Literary Seminar,Literary Society,Room 102,17-12-2026,11:00,12:30
+406,Music Quiz,Music Club,Sports Ground,24-11-2026,13:00,15:30
+407,Drama Quiz,Drama Club,Sports Ground,21-11-2026,13:30,14:30
+408,Robotics Quiz,Robotics Club,Room 101,26-12-2026,15:30,18:00
+409,Literary Bootcamp,Literary Society,Room 101,03-12-2026,15:00,17:30
+410,Music Workshop,Music Club,Seminar Hall,16-11-2026,10:30,12:00
+411,Music Orientation,Music Club,Seminar Hall,15-12-2026,16:30,18:00
+412,Dance Hackathon,Dance Club,Auditorium,16-11-2026,09:30,12:30
