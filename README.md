@@ -1,4 +1,4 @@
-# Campus Event Schedule Clash Detector
+# Campus Event Schedule Clash Detector:
 
 A menu-driven Python application that helps college clubs and campus administrators manage event schedules, detect booking conflicts, and find alternative time slots.
 
