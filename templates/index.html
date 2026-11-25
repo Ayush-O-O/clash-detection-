@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Campus Event Clash Detector</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=Figtree:wght@400;500;600&display=swap">
+<style>
+:root{--bg:#EEF3F7;--panel:#FFFFFF;--ink:#13293D;--muted:#5A6B7B;--line:#D3DEE7;--teal:#1B6F8A;--green:#2FA36B;--coral:#E4572E;--amber:#F5A524;--soft:#E6EEF4;color-scheme:light}
+@media (prefers-color-scheme:dark){:root{--bg:#0D1722;--panel:#14222F;--ink:#E4ECF2;--muted:#93A6B6;--line:#27384A;--teal:#4AA8C4;--green:#46C28A;--coral:#F27A55;--soft:#1B2D3D;color-scheme:dark}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 Figtree,system-ui,-apple-system,"Segoe UI",sans-serif}
+h1,h2{font-family:"Bricolage Grotesque",Georgia,serif;margin:0;line-height:1.15}
+.wrap{max-width:1180px;margin:0 auto;padding:28px 20px 48px}
+header{margin-bottom:22px}
+h1{font-size:clamp(28px,4vw,40px);font-weight:700}
+header p{margin:6px 0 0;color:var(--muted);max-width:60ch}
+.grid{display:grid;grid-template-columns:340px 1fr;gap:20px;align-items:start}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:20px}
+h2{font-size:20px;margin-bottom:14px}
+label{display:block;font-size:14px;font-weight:600;margin:12px 0 4px}
+input,select{width:100%;font:inherit;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:9px 10px}
+:focus-visible{outline:3px solid var(--amber);outline-offset:2px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+button{font:inherit;font-weight:600;border:0;border-radius:8px;padding:10px 16px;cursor:pointer;background:var(--teal);color:#fff}
+button:disabled{opacity:.45;cursor:not-allowed}
+button.ghost{background:var(--soft);color:var(--ink)}
+button.warn{background:var(--amber);color:#13293D}
+a.btn{display:inline-block;text-decoration:none;font-weight:600;border-radius:8px;padding:10px 16px;background:var(--soft);color:var(--ink)}
+#status{margin-top:14px;padding:12px;border-radius:10px;background:var(--soft);font-size:15px}
+#status.ok{border-left:5px solid var(--green)}
+#status.bad{border-left:5px solid var(--coral)}
+#status ul{margin:6px 0 8px;padding-left:18px}
+#flash{min-height:22px;margin-top:10px;color:var(--green);font-weight:600}
+.btns{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}
+.rhead{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:6px;margin-bottom:10px}
+.rhead span,.note{color:var(--muted);font-size:14px}
+.axis,.row{display:grid;grid-template-columns:104px 1fr;gap:10px}
+.ticks{position:relative;height:20px;font-size:12px;color:var(--muted)}
+.ticks i{position:absolute;font-style:normal}
+.row{margin-top:8px;align-items:center}
+.lab{font-size:14px;font-weight:600}
+.track{position:relative;height:42px;border-radius:8px;background:var(--bg);border:1px solid var(--line);overflow:hidden;
+background-image:repeating-linear-gradient(to right,var(--line) 0 1px,transparent 1px calc(100%/9))}
+.blk{position:absolute;top:5px;bottom:5px;border-radius:6px;background:var(--teal);color:#fff;font-size:12px;padding:0 7px;display:flex;align-items:center;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.blk.pv{background:color-mix(in srgb,var(--green) 30%,transparent);border:2px dashed var(--green);color:var(--ink)}
+.blk.pv.bad{background:color-mix(in srgb,var(--coral) 30%,transparent);border-color:var(--coral)}
+.empty{color:var(--muted);margin:12px 0 0;font-size:14px}
+.tabs{display:flex;gap:6px;flex-wrap:wrap;margin:26px 0 12px}
+.tabs button{background:transparent;color:var(--muted);border:1px solid var(--line)}
+.tabs button[aria-selected="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.scroll{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:14px;min-width:620px}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line)}
+th{font-weight:600;color:var(--muted)}
+td button{padding:4px 10px;font-size:13px}
+.bar{display:grid;grid-template-columns:120px 1fr 64px;gap:10px;align-items:center;margin:8px 0;font-size:14px}
+.bar .f{height:14px;border-radius:7px;background:var(--teal)}
+.bar.top .f{background:var(--amber)}
+pre{background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:14px;overflow:auto;max-height:420px;font-size:13px}
+@media (max-width:900px){.grid{grid-template-columns:1fr}.axis,.row{grid-template-columns:78px 1fr}.bar{grid-template-columns:90px 1fr 56px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <h1>Campus Event Clash Detector</h1>
+  <p>Pick a venue and a time. The Python program checks it and tells you at once if the slot is taken, and where the nearest free one is.</p>
+</header>
+
+<div class="grid">
+  <section class="card" aria-labelledby="bk">
+    <h2 id="bk">Book an event</h2>
+    <label for="name">Event name</label><input id="name" autocomplete="off" placeholder="Python workshop">
+    <label for="club">Club</label><input id="club" autocomplete="off" placeholder="Coding Club">
+    <label for="venue">Venue</label>
+    <select id="venue">{% for v in venues %}<option>{{ v }}</option>{% endfor %}</select>
+    <label for="date">Date</label><input id="date" type="date">
+    <div class="two">
+      <div><label for="start">Start</label><input id="start" type="time" value="10:00"></div>
+      <div><label for="end">End</label><input id="end" type="time" value="11:00"></div>
+    </div>
+    <div id="status" aria-live="polite"></div>
+    <div class="btns"><button id="save" type="button">Save event</button></div>
+    <div id="flash" aria-live="polite"></div>
+  </section>
+
+  <section class="card" aria-labelledby="dv">
+    <div class="rhead"><h2 id="dv">Day view</h2><span id="rdate"></span></div>
+    <div id="ruler"></div>
+    <p class="note" style="margin:14px 0 0">Your event shows as a dashed block while you type: green when it is free, red when it clashes.</p>
+  </section>
+</div>
+
+<div class="tabs" role="tablist">
+  <button role="tab" data-tab="events" aria-selected="true">All events</button>
+  <button role="tab" data-tab="usage" aria-selected="false">Venue usage</button>
+  <button role="tab" data-tab="report" aria-selected="false">Clash report</button>
+</div>
+
+<section class="card" id="tab-events">
+  <label for="q" style="margin-top:0">Search by club or venue</label>
+  <input id="q" placeholder="ai club, auditorium…" style="max-width:340px;margin-bottom:12px">
+  <div class="scroll"><table><thead><tr><th>ID</th><th>Event</th><th>Club</th><th>Venue</th><th>Date</th><th>Time</th><th></th></tr></thead><tbody id="rows"></tbody></table></div>
+  <p class="empty" id="noev"></p>
+</section>
+<section class="card" id="tab-usage" hidden><div id="usage"></div></section>
+<section class="card" id="tab-report" hidden>
+  <div class="btns"><button id="mkreport" type="button">Generate clash report</button><a class="btn" href="/report.txt" id="dl" hidden>Download clash_report.txt</a></div>
+  <pre id="reporttext" hidden></pre>
+</section>
+</div>
+
+<script>
+const WS=540,WE=1080,$=s=>document.querySelector(s);
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const pad=n=>String(n).padStart(2,"0");
+const flip=d=>d.split("-").reverse().join("-");
+let events=[],preview=null,timer=null;
+
+async function api(url,opts){const r=await fetch(url,opts);return r.json()}
+const post=(url,body)=>api(url,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(body)});
+const form=()=>({name:$("#name").value,club:$("#club").value,venue:$("#venue").value,
+  date:$("#date").value?flip($("#date").value):"",start:$("#start").value,end:$("#end").value});
+
+/* live check: the Python function find_clashes() / suggest_free_slot() answer */
+async function check(){
+  const st=$("#status"),res=await post("/api/check",form());
+  if(!res.ready){st.className="";st.textContent=res.error;preview=null;$("#save").disabled=true;drawRuler();return}
+  const bad=res.clashes.length>0;
+  preview={ev:res.event,bad};
+  st.className=bad?"bad":"ok";
+  if(!bad)st.textContent="No clash. This slot is free.";
+  else{
+    st.innerHTML="<b>This event clashes:</b><ul>"+res.clashes.map(c=>`<li>${c.type} with “${esc(c.name)}” (${esc(c.club)}, ${esc(c.venue)}, ${c.start}–${c.end})</li>`).join("")+"</ul>"+
+      (res.slot?`Nearest free slot at ${esc(res.event.venue)}: <b>${res.slot.start}–${res.slot.end}</b><div class="btns"><button class="warn" type="button" id="book">Book ${res.slot.start}–${res.slot.end}</button></div>`
+        :`No free slot of that length at ${esc(res.event.venue)} between 09:00 and 18:00.`)}
+  $("#save").disabled=bad;drawRuler()}
+function schedule(){clearTimeout(timer);timer=setTimeout(check,150)}
+
+async function save(book){
+  const res=await post("/api/add",{...form(),book_suggested:!!book});
+  if(res.ok){$("#flash").textContent=`Event #${res.event.id} saved (${res.event.start}–${res.event.end}).`;$("#name").value="";await load()}
+  else if(res.error)$("#flash").textContent=res.error;
+  else check()}
+
+/* day view */
+function drawRuler(){
+  const iso=$("#date").value,d=iso?flip(iso):"";$("#rdate").textContent=d||"Pick a date";
+  const day=events.filter(e=>e.date===d);
+  let h='<div class="axis"><div></div><div class="ticks">';
+  for(let t=9;t<18;t++)h+=`<i style="left:${(t-9)/9*100}%">${t}</i>`;
+  h+="</div></div>";
+  const blk=(e,cls,tip)=>{const l=Math.max(e.start_min,WS),r=Math.min(e.end_min,WE);if(r<=l)return"";
+    return `<div class="blk ${cls}" style="left:${(l-WS)/540*100}%;width:${(r-l)/540*100}%" title="${esc(tip)}">${esc(e.name||"New event")}</div>`};
+  for(const v of [...$("#venue").options].map(o=>o.value)){
+    h+=`<div class="row"><div class="lab">${esc(v)}</div><div class="track">`+
+      day.filter(e=>e.venue===v).map(e=>blk(e,"",`${e.name}, ${e.club}, ${e.start}–${e.end}`)).join("")+
+      (preview&&preview.ev.venue===v&&preview.ev.date===d?blk(preview.ev,"pv"+(preview.bad?" bad":""),"Your new event"):"")+"</div></div>"}
+  if(!day.length)h+='<p class="empty">No events on this date yet.</p>';
+  $("#ruler").innerHTML=h}
+
+/* tabs */
+function drawTable(){
+  const q=$("#q").value.trim().toLowerCase();
+  const list=events.filter(e=>!q||e.club.toLowerCase().includes(q)||e.venue.toLowerCase().includes(q));
+  $("#rows").innerHTML=list.map(e=>`<tr><td>${e.id}</td><td>${esc(e.name)}</td><td>${esc(e.club)}</td><td>${esc(e.venue)}</td><td>${e.date}</td><td>${e.start}–${e.end}</td><td><button class="ghost" data-del="${e.id}" type="button">Delete</button></td></tr>`).join("");
+  $("#noev").hidden=list.length>0;$("#noev").textContent=events.length?"No events match that search.":"No events yet. Book one above."}
+async function drawUsage(){
+  const u=await api("/api/usage");
+  if(!u.venues.length){$("#usage").innerHTML='<p class="empty">No events yet.</p>';return}
+  const max=u.venues[0].hours;
+  $("#usage").innerHTML=`<h2>Busiest venue: ${esc(u.venues[0].venue)} (${u.venues[0].hours.toFixed(2)} hours)</h2><p class="note" style="margin:0 0 12px">Busiest day: ${u.busiest_day.date} (${u.busiest_day.hours.toFixed(2)} hours)</p>`+
+    u.venues.map((v,i)=>`<div class="bar ${i?"":"top"}"><span>${esc(v.venue)}</span><div><div class="f" style="width:${v.hours/max*100}%"></div></div><span>${v.hours.toFixed(2)} h</span></div>`).join("")}
+async function load(){events=await api("/api/events");drawTable();drawUsage();check()}
+
+document.addEventListener("click",async e=>{
+  const t=e.target;
+  if(t.id==="book")save(true);
+  if(t.dataset.del){await api("/api/events/"+t.dataset.del,{method:"DELETE"});load()}
+  if(t.dataset.tab){document.querySelectorAll(".tabs button").forEach(b=>b.setAttribute("aria-selected",b===t));
+    ["events","usage","report"].forEach(n=>$("#tab-"+n).hidden=n!==t.dataset.tab);if(t.dataset.tab==="usage")drawUsage()}});
+$("#save").onclick=()=>save(false);
+$("#mkreport").onclick=async()=>{const r=await api("/api/report");$("#reporttext").textContent=r.text;$("#reporttext").hidden=false;$("#dl").hidden=false};
+["name","club","venue","date","start","end"].forEach(i=>$("#"+i).addEventListener("input",()=>{$("#flash").textContent="";schedule()}));
+$("#q").addEventListener("input",drawTable);
+const n=new Date();$("#date").value=n.getFullYear()+"-"+pad(n.getMonth()+1)+"-"+pad(n.getDate());
+load();
+</script>
+</body>
+</html>
