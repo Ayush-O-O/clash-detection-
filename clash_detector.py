@@ -1,32 +1,32 @@
 """
 Campus Event Schedule Clash Detector
 Course: Computational Thinking and Programming (2026CSAE100)
-
+ 
 A menu-driven program where clubs add events. It detects venue clashes and
 organizer (club) clashes, suggests the nearest free slot, shows venue usage
 and writes a clash report.
-
+ 
 Key idea: every time is converted to minutes after midnight (9:30 -> 570),
 so comparing and subtracting times is easy without the datetime module.
 Dates are typed as DD-MM-YYYY and times as HH:MM (24-hour).
 """
-
+ 
 import csv
 import os
 from datetime import datetime
-
+ 
 # ---------------------------------------------------------------- settings
 EVENTS_FILE = "events.csv"
 REPORT_FILE = "clash_report.txt"
 FIELDS = ["id", "name", "club", "venue", "date", "start", "end"]
-
+ 
 # Set of valid venues (add your campus venues here)
 VENUES = {"Auditorium", "Seminar Hall", "Room 101", "Room 102", "Sports Ground"}
-
+ 
 WORK_START = 9 * 60    # 09:00 in minutes
 WORK_END = 18 * 60     # 18:00 in minutes
-
-
+ 
+ 
 # ------------------------------------------------------------ time helpers
 def to_minutes(text):
     """Convert 'HH:MM' to minutes after midnight. Return None if invalid."""
@@ -37,13 +37,13 @@ def to_minutes(text):
     if hours > 23 or minutes > 59:
         return None
     return hours * 60 + minutes
-
-
+ 
+ 
 def to_time_text(minutes):
     """Convert minutes after midnight back to 'HH:MM'."""
     return f"{minutes // 60:02d}:{minutes % 60:02d}"
-
-
+ 
+ 
 def valid_date(text):
     """Return True if text is a real date in DD-MM-YYYY format."""
     try:
@@ -51,13 +51,13 @@ def valid_date(text):
         return True
     except ValueError:
         return False
-
-
+ 
+ 
 def date_key(text):
     """Sort key so dates are ordered properly (not as plain text)."""
     return datetime.strptime(text, "%d-%m-%Y")
-
-
+ 
+ 
 # ----------------------------------------------------------- file handling
 def load_events():
     """Read all events from the CSV file. Missing or empty file -> empty list."""
@@ -79,8 +79,8 @@ def load_events():
     except OSError:
         print("Could not read the events file.")
     return events
-
-
+ 
+ 
 def save_events(events):
     """Write all events to the CSV file."""
     try:
@@ -90,21 +90,21 @@ def save_events(events):
             writer.writerows(events)
     except OSError:
         print("Could not save the events file.")
-
-
+ 
+ 
 def next_id(events):
     """Next free event id."""
     return max((e["id"] for e in events), default=0) + 1
-
-
+ 
+ 
 def make_event(event_id, name, club, venue, date, start_min, end_min):
     """Build one event dictionary."""
     return {"id": event_id, "name": name, "club": club, "venue": venue,
             "date": date, "start": to_time_text(start_min),
             "end": to_time_text(end_min),
             "start_min": start_min, "end_min": end_min}
-
-
+ 
+ 
 # ---------------------------------------------------------- input helpers
 def ask_text(prompt):
     """Ask until the answer is not empty."""
@@ -113,16 +113,16 @@ def ask_text(prompt):
         if value:
             return value
         print("  This field cannot be empty. Try again.")
-
-
+ 
+ 
 def ask_date(prompt="Date (DD-MM-YYYY): "):
     while True:
         value = input(prompt).strip()
         if valid_date(value):
             return datetime.strptime(value, "%d-%m-%Y").strftime("%d-%m-%Y")
         print("  Invalid date. Use DD-MM-YYYY, for example 15-11-2026.")
-
-
+ 
+ 
 def ask_time(prompt):
     """Ask until a valid HH:MM time is given. Return (text, minutes)."""
     while True:
@@ -131,8 +131,8 @@ def ask_time(prompt):
         if minutes is not None:
             return to_time_text(minutes), minutes
         print("  Invalid time. Use 24-hour HH:MM, for example 14:30.")
-
-
+ 
+ 
 def ask_venue():
     while True:
         value = input("Venue: ").strip()
@@ -140,8 +140,8 @@ def ask_venue():
             if venue.lower() == value.lower():
                 return venue
         print("  Unknown venue. Valid venues: " + ", ".join(sorted(VENUES)))
-
-
+ 
+ 
 def ask_event_details():
     """Ask for all event fields with validation. Return a tuple of values."""
     name = ask_text("Event name: ")
@@ -155,14 +155,14 @@ def ask_event_details():
             break
         print("  End time must be after the start time.")
     return name, club, venue, date, start_min, end_min
-
-
+ 
+ 
 # ------------------------------------------------- computational feature 1
 def overlaps(start1, end1, start2, end2):
     """True if two time ranges overlap. Back-to-back (end == start) is fine."""
     return start1 < end2 and start2 < end1
-
-
+ 
+ 
 def find_clashes(new_event, events, ignore_id=None):
     """
     Compare new_event with saved events on the same date.
@@ -180,8 +180,8 @@ def find_clashes(new_event, events, ignore_id=None):
         if other["club"].lower() == new_event["club"].lower():
             clashes.append(("Organizer clash", other))
     return clashes
-
-
+ 
+ 
 # ------------------------------------------------- computational feature 2
 def suggest_free_slot(new_event, events, ignore_id=None):
     """
@@ -194,7 +194,7 @@ def suggest_free_slot(new_event, events, ignore_id=None):
                   if e["venue"] == new_event["venue"]
                   and e["date"] == new_event["date"]
                   and e["id"] != ignore_id)
-
+ 
     # Find gaps between busy times inside working hours
     gaps = []
     cursor = WORK_START
@@ -204,23 +204,27 @@ def suggest_free_slot(new_event, events, ignore_id=None):
         cursor = max(cursor, end)
     if cursor < WORK_END:
         gaps.append((cursor, WORK_END))
-
-    # In every gap that is long enough, take the start nearest to the wish
+ 
+    # In every gap that is long enough, try the start nearest to the wish
+    # first, then every 15 minutes inside the gap (so a slot is still found
+    # when the nearest one is blocked, e.g. the club is busy elsewhere)
     best = None
     for gap_start, gap_end in gaps:
         if gap_end - gap_start < duration:
             continue
         latest_start = gap_end - duration
-        candidate = min(max(new_event["start_min"], gap_start), latest_start)
-        trial = dict(new_event, start_min=candidate, end_min=candidate + duration)
-        if find_clashes(trial, events, ignore_id):     # e.g. club busy elsewhere
-            continue
-        distance = abs(candidate - new_event["start_min"])
-        if best is None or distance < best[0]:
-            best = (distance, candidate, candidate + duration)
+        ideal = min(max(new_event["start_min"], gap_start), latest_start)
+        starts = [ideal] + list(range(gap_start, latest_start + 1, 15))
+        for candidate in starts:
+            trial = dict(new_event, start_min=candidate, end_min=candidate + duration)
+            if find_clashes(trial, events, ignore_id):
+                continue
+            distance = abs(candidate - new_event["start_min"])
+            if best is None or distance < best[0]:
+                best = (distance, candidate, candidate + duration)
     return (best[1], best[2]) if best else None
-
-
+ 
+ 
 # ----------------------------------------------------------------- display
 def print_events(events, title="Events"):
     if not events:
@@ -234,25 +238,30 @@ def print_events(events, title="Events"):
         print(f"{e['id']:<4}{e['name'][:20]:<22}{e['club'][:14]:<16}"
               f"{e['venue']:<15}{e['date']:<12}{e['start']}-{e['end']}")
     print("-" * 86)
-
-
+ 
+ 
 def sorted_events(events):
     return sorted(events, key=lambda e: (date_key(e["date"]), e["start_min"]))
-
-
+ 
+ 
+def sort_events(events):
+    """Same as sorted_events(); the website and window versions call this name."""
+    return sorted_events(events)
+ 
+ 
 def show_clashes(clashes):
     for kind, other in clashes:
         print(f"  ! {kind} with event #{other['id']} '{other['name']}' "
               f"({other['club']}, {other['venue']}, {other['date']} "
               f"{other['start']}-{other['end']})")
-
-
+ 
+ 
 # -------------------------------------------------------------- menu items
 def add_event(events):
     print("\n--- Add event ---")
     name, club, venue, date, start_min, end_min = ask_event_details()
     event = make_event(next_id(events), name, club, venue, date, start_min, end_min)
-
+ 
     clashes = find_clashes(event, events)
     if clashes:
         print("\nThis event clashes:")
@@ -269,26 +278,26 @@ def add_event(events):
             print("Event NOT saved.")
             return
         event = make_event(event["id"], name, club, venue, date, slot[0], slot[1])
-
+ 
     events.append(event)
     save_events(events)
     print(f"Event #{event['id']} saved ({event['start']}-{event['end']}).")
-
-
+ 
+ 
 def view_day(events):
     date = ask_date()
     day = sorted(e for e in events if e["date"] == date) if False else \
         sorted((e for e in events if e["date"] == date), key=lambda e: e["start_min"])
     print_events(day, f"Timetable for {date}")
-
-
+ 
+ 
 def search_events(events):
     term = ask_text("Search by club or venue: ").lower()
     found = [e for e in sorted_events(events)
              if term in e["club"].lower() or term in e["venue"].lower()]
     print_events(found, f"Results for '{term}'")
-
-
+ 
+ 
 def hours_per_venue(events):
     """Dictionary: venue -> total hours booked."""
     totals = {}
@@ -296,8 +305,8 @@ def hours_per_venue(events):
         hours = (e["end_min"] - e["start_min"]) / 60
         totals[e["venue"]] = totals.get(e["venue"], 0) + hours
     return totals
-
-
+ 
+ 
 def hours_per_day(events):
     """Dictionary: date -> total hours booked (all venues)."""
     totals = {}
@@ -305,8 +314,8 @@ def hours_per_day(events):
         hours = (e["end_min"] - e["start_min"]) / 60
         totals[e["date"]] = totals.get(e["date"], 0) + hours
     return totals
-
-
+ 
+ 
 def venue_usage(events):
     if not events:
         print("\nNo events yet.")
@@ -320,8 +329,8 @@ def venue_usage(events):
     busiest_day = max(days, key=days.get)
     print(f"\nBusiest venue: {ranking[0][0]} ({ranking[0][1]:.2f} hours)")
     print(f"Busiest day  : {busiest_day} ({days[busiest_day]:.2f} hours)")
-
-
+ 
+ 
 def clash_report(events):
     """Write every clash found in the saved events to a TXT file."""
     lines = ["CAMPUS EVENT CLASH REPORT",
@@ -357,8 +366,8 @@ def clash_report(events):
         print(f"\nReport written to {REPORT_FILE} ({count} clash(es) found).")
     except OSError:
         print("Could not write the report file.")
-
-
+ 
+ 
 def edit_or_delete(events):
     print_events(sorted_events(events), "All events")
     if not events:
@@ -372,7 +381,7 @@ def edit_or_delete(events):
     if target is None:
         print("No event with that ID.")
         return
-
+ 
     choice = input("(e)dit or (d)elete? ").strip().lower()
     if choice == "d":
         if input(f"Delete '{target['name']}'? (y/n): ").strip().lower() == "y":
@@ -396,8 +405,8 @@ def edit_or_delete(events):
         print("Event updated.")
     else:
         print("No change made.")
-
-
+ 
+ 
 # -------------------------------------------------------------------- main
 MENU = """
 ===== Campus Event Schedule Clash Detector =====
@@ -406,8 +415,8 @@ MENU = """
 3. Day timetable      7. Edit / delete event
 4. Search events      8. Exit
 """
-
-
+ 
+ 
 def main():
     events = load_events()
     if not os.path.exists(EVENTS_FILE):
@@ -434,10 +443,13 @@ def main():
             break
         else:
             print("Please enter a number from 1 to 8.")
-
-
+ 
+ 
+# This check lets other files (like clash_gui.py) import the functions above
+# without starting the menu. Running this file directly still starts the menu.
 if __name__ == "__main__":
     try:
         main()
     except (KeyboardInterrupt, EOFError):
         print("\nProgram closed.")
+ 
